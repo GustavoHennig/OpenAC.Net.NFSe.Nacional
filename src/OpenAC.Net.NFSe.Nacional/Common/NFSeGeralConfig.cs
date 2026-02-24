@@ -45,7 +45,7 @@ public sealed class NFSeGeralConfig : DFeGeralConfigBase
     /// Obtém ou define a versão da NFSe.
     /// </summary>
     /// <value>A versão da NFSe.</value>
-    public VersaoNFSe Versao { get; set; } = VersaoNFSe.Ve100;
+    public VersaoNFSe Versao { get; set; } = VersaoNFSe.Ve101;
 
     #endregion Properties
 }

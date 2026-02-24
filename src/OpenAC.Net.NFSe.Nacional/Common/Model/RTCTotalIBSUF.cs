@@ -41,8 +41,8 @@ public sealed class RTCTotalIBSUF
     /// <summary>
     /// Total do diferimento do IBS estadual.
     /// </summary>
-    [DFeElement(TipoCampo.De2, "vDifUF", Min = 4, Max = 18, Ocorrencia = Ocorrencia.Obrigatoria)]
-    public decimal ValorDiferimentoUF { get; set; }
+    [DFeElement(TipoCampo.De2, "vDifUF", Min = 4, Max = 18, Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public decimal? ValorDiferimentoUF { get; set; }
 
     /// <summary>
     /// Total do IBS estadual.

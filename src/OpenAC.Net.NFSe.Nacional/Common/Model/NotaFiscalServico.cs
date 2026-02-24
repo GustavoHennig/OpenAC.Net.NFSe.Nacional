@@ -68,6 +68,11 @@ public class NotaFiscalServico : DFeSignDocument<NotaFiscalServico>
     /// <param name="configuracao">Configuração da NFSe.</param>
     public void Assinar(ConfiguracaoNFSe configuracao)
     {
+        if (string.IsNullOrWhiteSpace(Informacoes.Id))
+            Informacoes.Id = NFSeIdHelper.GerarId(Informacoes);
+        else
+            NFSeIdHelper.ValidarIdOuLancar(Informacoes);
+
         var options = DFeSaveOptions.DisableFormatting;
         if (configuracao.Geral.RetirarAcentos)
             options |= DFeSaveOptions.RemoveAccents;

@@ -54,7 +54,7 @@ public sealed class RTCIBSCBS
     /// Percentual de redutor aplicado em compra governamental.
     /// </summary>
     [DFeElement(TipoCampo.De2, "pRedutor", Min = 1, Max = 3, Ocorrencia = Ocorrencia.NaoObrigatoria)]
-    public decimal PercentualRedutor { get; set; }
+    public decimal? PercentualRedutor { get; set; }
     
     /// <summary>
     /// Valores brutos referentes ao IBS/CBS.

@@ -93,6 +93,18 @@ public sealed class InfDps
     public EmitenteDps TipoEmitente { get; set; } = EmitenteDps.Prestador;
 
     /// <summary>
+    /// Motivo da emissão pelo Tomador/Intermediário.
+    /// </summary>
+    [DFeElement(TipoCampo.Enum, "cMotivoEmisTI", Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public MotivoEmissaoTomadorIntermediario? MotivoEmissaoTomadorIntermediario { get; set; }
+
+    /// <summary>
+    /// Chave da NFS-e rejeitada pelo Tomador/Intermediário.
+    /// </summary>
+    [DFeElement(TipoCampo.Str, "chNFSeRej", Min = 50, Max = 50, Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public string? ChaveNFSeRejeitada { get; set; }
+
+    /// <summary>
     /// Código da localidade do emitente.
     /// </summary>
     [DFeElement(TipoCampo.Str, "cLocEmi", Min = 0, Max = 7, Ocorrencia = Ocorrencia.Obrigatoria)]

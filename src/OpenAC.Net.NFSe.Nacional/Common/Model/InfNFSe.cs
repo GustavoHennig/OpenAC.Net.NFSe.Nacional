@@ -70,14 +70,14 @@ public sealed class InfNFSe
     /// <summary>
     /// Código do local de incidência.
     /// </summary>
-    [DFeElement(TipoCampo.StrNumber, "cLocIncid", Min = 0, Max = 7, Ocorrencia = Ocorrencia.Obrigatoria)]
-    public string CodLocalIncidencia { get; set; } = string.Empty;
+    [DFeElement(TipoCampo.StrNumber, "cLocIncid", Min = 0, Max = 7, Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public string? CodLocalIncidencia { get; set; }
     
     /// <summary>
     /// Descrição do local de incidência.
     /// </summary>
-    [DFeElement(TipoCampo.Str, "xLocIncid", Min = 1, Max = 150, Ocorrencia = Ocorrencia.Obrigatoria)]
-    public string LocalIncidencia { get; set; } = string.Empty;
+    [DFeElement(TipoCampo.Str, "xLocIncid", Min = 1, Max = 150, Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public string? LocalIncidencia { get; set; }
 
     /// <summary>
     /// Descrição do tributo nacional.
@@ -88,13 +88,13 @@ public sealed class InfNFSe
     /// <summary>
     /// Descrição do tributo municipal.
     /// </summary>
-    [DFeElement(TipoCampo.Str, "xTribMun", Min = 1, Max = 600, Ocorrencia = Ocorrencia.Obrigatoria)]
+    [DFeElement(TipoCampo.Str, "xTribMun", Min = 1, Max = 600, Ocorrencia = Ocorrencia.NaoObrigatoria)]
     public string? DescricaoTributoMunicipal { get; set; }
     
     /// <summary>
     /// Descrição do código NBS.
     /// </summary>
-    [DFeElement(TipoCampo.Str, "xNBS", Min = 1, Max = 600, Ocorrencia = Ocorrencia.Obrigatoria)]
+    [DFeElement(TipoCampo.Str, "xNBS", Min = 1, Max = 600, Ocorrencia = Ocorrencia.NaoObrigatoria)]
     public string? DescricaoCodNBS { get; set; }
     
     /// <summary>
@@ -118,8 +118,8 @@ public sealed class InfNFSe
     /// <summary>
     /// Processo de emissão da NFSe.
     /// </summary>
-    [DFeElement(TipoCampo.Enum, "procEmi", Ocorrencia = Ocorrencia.Obrigatoria)]
-    public ProcessoEmissao ProcessoEmissao { get; set; } = ProcessoEmissao.AplicativoContribuinte;
+    [DFeElement(TipoCampo.Enum, "procEmi", Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public ProcessoEmissao? ProcessoEmissao { get; set; }
     
     /// <summary>
     /// Situação da NFSe.
