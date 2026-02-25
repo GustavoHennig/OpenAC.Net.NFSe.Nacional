@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Assembly         : OpenAC.Net.NFSe.Nacional
 // Author           : RFTD
 // Created          : 09-09-2023
@@ -62,7 +62,7 @@ public sealed class PedidoRegistroEvento : DFeSignDocument<PedidoRegistroEvento>
     /// Versão do layout do pedido.
     /// </summary>
     [DFeAttribute(TipoCampo.Enum, "versao", Ocorrencia = Ocorrencia.Obrigatoria)]
-    public VersaoNFSe Versao { get; set; } = VersaoNFSe.Ve100;
+    public VersaoNFSe Versao { get; set; } = VersaoNFSe.Ve101;
 
     /// <summary>
     /// Informações do pedido de registro de evento.
@@ -84,7 +84,7 @@ public sealed class PedidoRegistroEvento : DFeSignDocument<PedidoRegistroEvento>
         if (configuracao.Geral.RetirarAcentos)
             options |= DFeSaveOptions.RemoveAccents;
         
-        AssinarDocumento(configuracao.Certificados.ObterCertificado(), options, false);
+        AssinarDocumento(configuracao.Certificados.ObterCertificadoAssinatura(), options, false);
     }
 
     #endregion Methods

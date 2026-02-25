@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Assembly         : OpenAC.Net.NFSe.Nacional
 // Author           : RFTD
 // Created          : 09-09-2023
@@ -160,7 +160,7 @@ public sealed class Dps : DFeSignDocument<Dps>
     {
         var total = infDps.Valores.Tributos.Total;
         var indTotTribInformado = total.IndicadorTotal.HasValue;
-        var pTotTribSnInformado = total.PercentualTotalSimplesNacional.HasValue;
+        var pTotTribSnInformado = total.PercetualSimples.HasValue;
 
         var optanteSimples = infDps.Prestador.Regime.OptanteSimplesNacional;
         switch (optanteSimples)

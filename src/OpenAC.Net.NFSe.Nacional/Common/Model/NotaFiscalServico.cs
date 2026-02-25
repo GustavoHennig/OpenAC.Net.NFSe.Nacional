@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Assembly         : OpenAC.Net.NFSe.Nacional
 // Author           : RFTD
 // Created          : 09-09-2023
@@ -77,7 +77,7 @@ public class NotaFiscalServico : DFeSignDocument<NotaFiscalServico>
         if (configuracao.Geral.RetirarAcentos)
             options |= DFeSaveOptions.RemoveAccents;
         
-        AssinarDocumento(configuracao.Certificados.ObterCertificado(), options, false, SignDigest.SHA1);
+        AssinarDocumento(configuracao.Certificados.ObterCertificadoAssinatura(), options, false, SignDigest.SHA1);
     }
 
     #endregion Methods
