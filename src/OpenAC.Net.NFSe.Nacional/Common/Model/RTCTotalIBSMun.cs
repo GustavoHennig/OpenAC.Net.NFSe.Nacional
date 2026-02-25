@@ -41,8 +41,8 @@ public sealed class RTCTotalIBSMun
     /// <summary>
     /// Total do diferimento do IBS municipal.
     /// </summary>
-    [DFeElement(TipoCampo.De2, "vDifMun", Min = 4, Max = 18, Ocorrencia = Ocorrencia.Obrigatoria)]
-    public decimal ValorDiferimentoMunicipal { get; set; }
+    [DFeElement(TipoCampo.De2, "vDifMun", Min = 4, Max = 18, Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public decimal? ValorDiferimentoMunicipal { get; set; }
 
     /// <summary>
     /// Total do IBS municipal.

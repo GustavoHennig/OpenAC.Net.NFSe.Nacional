@@ -47,8 +47,8 @@ public sealed class RTCTotalCBS
     /// <summary>
     /// Total do diferimento da CBS.
     /// </summary>
-    [DFeElement(TipoCampo.De2, "vDifCBS", Min = 4, Max = 18, Ocorrencia = Ocorrencia.Obrigatoria)]
-    public decimal ValorDiferimentoCBS { get; set; }
+    [DFeElement(TipoCampo.De2, "vDifCBS", Min = 4, Max = 18, Ocorrencia = Ocorrencia.NaoObrigatoria)]
+    public decimal? ValorDiferimentoCBS { get; set; }
 
     /// <summary>
     /// Total da CBS.

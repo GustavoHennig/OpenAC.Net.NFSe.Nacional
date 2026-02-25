@@ -1,10 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Schema;
 using OpenAC.Net.Core.Logging;
 using OpenAC.Net.DFe.Core;
@@ -137,7 +139,7 @@ public abstract class NFSeWebserviceBase : IOpenLog
         var handler = new HttpClientHandler();
 
         handler.SslProtocols = (SslProtocols)Configuracao.WebServices.Protocolos;
-        handler.ClientCertificates.Add(Configuracao.Certificados.ObterCertificado());
+        handler.ClientCertificates.Add(Configuracao.Certificados.ObterCertificadoAssinatura());
         var client = new HttpClient(handler);
 
         var request = new HttpRequestMessage(method, url);
@@ -161,7 +163,7 @@ public abstract class NFSeWebserviceBase : IOpenLog
     /// <param name="versao">Versão do Schema a ser carregado</param>
     /// <exception cref="XmlSchemaException">Lançada se o arquivo de schema não for encontrado.</exception>
     /// <exception cref="XmlSchemaValidationException">Lançada se houver erros de validação.</exception>
-    protected virtual void ValidarSchema(SchemaNFSe schema, string xml, VersaoNFSe versao = VersaoNFSe.Ve100)
+    protected virtual void ValidarSchema(SchemaNFSe schema, string xml, VersaoNFSe versao = VersaoNFSe.Ve101)
     {
         if (!Configuracao.WebServices.ValidarSchemas)
             return;

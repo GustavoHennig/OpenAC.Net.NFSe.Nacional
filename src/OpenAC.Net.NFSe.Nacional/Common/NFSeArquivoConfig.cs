@@ -91,7 +91,7 @@ public sealed class NFSeArquivoConfig : DFeArquivosConfigBase<SchemaNFSe>
     /// Obtém ou define a Versão do Schema.
     /// </summary>
     /// <value>A versão </value>
-    public VersaoNFSe VersaoSchema { get; set; } = VersaoNFSe.Ve100;
+    public VersaoNFSe VersaoSchema { get; set; } = VersaoNFSe.Ve101;
 
 
     #endregion Properties
